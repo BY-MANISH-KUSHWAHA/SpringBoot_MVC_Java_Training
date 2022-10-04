@@ -17,16 +17,15 @@ public class PlayerServlet extends HttpServlet {
         System.out.println(playerName);
         request.setAttribute("jspPlayerName",playerName);
 
-
         request.getRequestDispatcher("/WEB-INF/views/info.jsp").forward(request,response);
 
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-            String playerName = request.getParameter("name");
+            String playerName = request.getParameter("pname");
             System.out.println(playerName);
-            request.setAttribute("jspPlayerName",playerName);
+            request.setAttribute("PlayerName",playerName);
             request.getRequestDispatcher("/WEB-INF/views/welcome.jsp").forward(request,response);
 
 

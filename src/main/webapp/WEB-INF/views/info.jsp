@@ -12,11 +12,15 @@
 </head>
 <body>
 
-<form action="/player.do" method="post">
-  <label>Player Name:</label>
-  <input type="text" name="playerName" />
-  <input type="submit" value="Enter" />
-</form>
+<h1>
+    Welcome Back! ${jspPlayerName}
+</h1>
+
+<%
+    System.out.println(request.getAttribute("jspPlayerName"));
+%>
+
+
 
 </body>
 </html>
