@@ -10,12 +10,20 @@ import java.io.PrintWriter;
 
 @WebServlet(urlPatterns = "/player.do")
 public class PlayerServlet extends HttpServlet {
+    private PlayerService service = new PlayerService();
     @Override
     protected  void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
-
         String playerName = request.getParameter("name");
+
         System.out.println(playerName);
-        request.setAttribute("jspPlayerName",playerName);
+        Player player;
+        if(playerName==null) player =  service.getPlayerById(Integer.parseInt(request.getParameter("id")));
+        else   player =  service.getPlayerByName(playerName);
+
+        request.setAttribute("name",playerName);
+        request.setAttribute("id",player.getId());
+        request.setAttribute("nationality",player.getNationality());
+        request.setAttribute("age",player.getAge());
 
         request.getRequestDispatcher("/WEB-INF/views/info.jsp").forward(request,response);
 

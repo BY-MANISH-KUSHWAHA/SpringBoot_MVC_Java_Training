@@ -13,11 +13,17 @@
 <body>
 
 <h1>
-    Welcome Back! ${jspPlayerName}
+    Player Info
 </h1>
+<h2>
+    Name: ${name} <br>
+    Age: ${age} <br>
+    Nationality: ${nationality} <br>
+    id: ${id} <br>
+</h2>
 
 <%
-    System.out.println(request.getAttribute("jspPlayerName"));
+    System.out.println(request.getAttribute("name"));
 %>
 
 
