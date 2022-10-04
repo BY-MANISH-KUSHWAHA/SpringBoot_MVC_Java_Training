@@ -1,4 +1,4 @@
-![alt text](https://drive.google.com/file/d/1TCKaC8A6IU7o3etJ_DLaC6ai51x9EEQq/view?usp=sharing
+![Tomcat Server Request and Response](/assets/Capture.PNG)
 )
 
 ## CLIENT <=> WEB SERVER <=> APP SERVER
