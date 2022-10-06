@@ -23,7 +23,7 @@
 </h2>
 
 <%
-    System.out.println(request.getAttribute("name"));
+    System.out.println(request.getAttribute("name")+"hello");
 %>
 
 

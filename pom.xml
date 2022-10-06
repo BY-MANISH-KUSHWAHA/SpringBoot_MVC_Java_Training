@@ -39,7 +39,7 @@
                         <artifactId>maven-compiler-plugin</artifactId>
                         <version>3.2</version>
                         <configuration>
-                            <verbos>true</verbos>
+                            <verbose>true</verbose>
                             <source>1.8</source>
                             <target>1.8</target>
                             <showWarnings>true</showWarnings>

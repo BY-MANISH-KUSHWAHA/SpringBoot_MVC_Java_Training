@@ -26,8 +26,6 @@
 <form action="/player.do" method="post">
     <label>Player Name:</label>
     <input type="text" name="name" />
-    <label>Player Id:</label>
-    <input type="text" name="id" />
     <input type="submit" value="Enter" />
 </form>
 

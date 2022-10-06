@@ -16,11 +16,9 @@ public class PlayerServlet extends HttpServlet {
         String playerName = request.getParameter("name");
 
         System.out.println(playerName);
-        Player player;
-        if(playerName==null) player =  service.getPlayerById(Integer.parseInt(request.getParameter("id")));
-        else   player =  service.getPlayerByName(playerName);
+        Player player =  service.getPlayerByName(playerName);
 
-        request.setAttribute("name",playerName);
+        request.setAttribute("name",player.getName());
         request.setAttribute("id",player.getId());
         request.setAttribute("nationality",player.getNationality());
         request.setAttribute("age",player.getAge());
